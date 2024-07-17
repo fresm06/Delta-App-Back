@@ -1,7 +1,17 @@
 from rest_framework import serializers
-from .models import Delta
+from .models import UploadedFile, Delta, Article
 
 class DeltaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Delta
-        fields = ['title']
+        fields = ['title', 'picture', 'detail', 'idea', 'studyTime', 'profile']
+
+class ArticleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Article
+        fields = ['title', 'detail', 'idea', 'studyTime', 'profile']  
+
+class FileUploadSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UploadedFile
+        fields = ['file', 'uploaded_on']
