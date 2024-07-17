@@ -1,12 +1,12 @@
 from django.db import models
 
 class Delta(models.Model):
-    title = models.CharField(max_length=100)
-    picture = models.ImageField(upload_to='photos/')
-    detail = models.CharField(max_length=100)
-    idea = models.CharField(max_length=100)
-    studyTime = models.CharField(max_length=100)
-    profile = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, default='default_value')
+    picture = models.ImageField(upload_to='photos/', default='default_value')
+    detail = models.CharField(max_length=100, default='default_value')
+    idea = models.CharField(max_length=100, default='default_value')
+    studyTime = models.CharField(max_length=100, default='default_value')
+    profile = models.CharField(max_length=100, default='default_value')
 
 class Article(models.Model):
     title = models.FileField()
