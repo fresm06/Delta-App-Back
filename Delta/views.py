@@ -7,8 +7,6 @@ from rest_framework import viewsets
 from .models import Article
 from .serializers import ArticleSerializer
 from django.shortcuts import render, redirect
-from .forms import PhotoForm
-from .models import Photo
 from rest_framework import status
 from rest_framework.parsers import FormParser, MultiPartParser
 from rest_framework.permissions import IsAuthenticated, AllowAny
