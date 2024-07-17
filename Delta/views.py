@@ -49,3 +49,5 @@ class FileUploadAPIView(APIView):
             serializer.errors,
             status=status.HTTP_400_BAD_REQUEST
         )
+    class Meta:
+        db_table = 'Delta_uploadedfile'
