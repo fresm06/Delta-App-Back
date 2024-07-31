@@ -23,12 +23,6 @@ def PostAPI(request,id):
     return Response(serializer.data)
 
 
-class ArticleViewSet(viewsets.ModelViewSet):
-    queryset = Article.objects.all()
-    serializer_class = ArticleSerializer
-
-
-
 class FileUploadAPIView(APIView):
     parser_classes = (MultiPartParser, FormParser)
     serializer_class = FileUploadSerializer

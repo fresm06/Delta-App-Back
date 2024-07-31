@@ -8,10 +8,6 @@ class Delta(models.Model):
     studyTime = models.CharField(max_length=100, default='default_value')
     profile = models.CharField(max_length=100, default='default_value')
 
-class Article(models.Model):
-    title = models.FileField()
-
-
 class UploadedFile(models.Model):
     file = models.FileField()
     uploaded_on = models.DateTimeField(auto_now_add=True)

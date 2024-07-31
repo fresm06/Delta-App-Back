@@ -6,12 +6,7 @@ class DeltaSerializer(serializers.ModelSerializer):
         model = Delta
         fields = ['title', 'picture', 'detail', 'idea', 'studyTime', 'profile']
 
-class ArticleSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Article
-        fields = ['title', 'detail', 'idea', 'studyTime', 'profile']  
-
 class FileUploadSerializer(serializers.ModelSerializer):
     class Meta:
         model = UploadedFile
-        fields = ('file', 'uploaded_on',)
+        fields = ('file', 'uploaded_on')
