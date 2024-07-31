@@ -12,6 +12,7 @@ from django.urls import path
 urlpatterns = [
     path("<int:id>/", PostAPI), 
     path('upload-file/', FileUploadAPIView.as_view(), name='upload-file'),
+    path('', views.map, name='map')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
