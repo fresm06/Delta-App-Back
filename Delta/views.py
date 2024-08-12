@@ -4,8 +4,6 @@ from .models import Delta
 from .serializers import DeltaSerializer
 import random
 from rest_framework import viewsets
-from .models import Article
-from .serializers import ArticleSerializer
 from django.shortcuts import render, redirect
 from rest_framework import status
 from rest_framework.parsers import FormParser, MultiPartParser
